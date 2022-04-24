@@ -1,0 +1,37 @@
+{
+  "name": "pet",
+  "version": "1.0.0",
+  "description": "cli pet",
+  "private": true,
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "dev:app": "pnpm run start --filter @examples/app",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "commitlint": "^16.2.3",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{d.ts,json,md}": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@examples/app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pet"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pet": "workspace:*"
+  }
+}
