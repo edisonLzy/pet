@@ -7,12 +7,17 @@
     "pet": "./bin/pet"
   },
   "scripts": {
-    "dev": "node src/index.js"
+    "build": "pnpm esbuild src/** --bundle --outdir=lib --platform=node --external:esbuild",
+    "dev": "pnpm build -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^9.2.0"
+    "commander": "^9.2.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
   }
 }

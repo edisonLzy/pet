@@ -7,24 +7,29 @@
     "example": "example"
   },
   "scripts": {
-    "dev:app": "pnpm run start --filter @examples/app",
-    "prepare": "husky install"
+    "website": "pnpm dev --filter @examples/app",
+    "prepare": "husky install",
+    "dev":"pnpm -r --filter ./packages --parallel run dev",
+    "build": "pnpm -r --filter ./packages run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
     "@babel/eslint-parser": "^7.17.0",
     "@commitlint/config-conventional": "^16.2.1",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "commitlint": "^16.2.3",
+    "esbuild": "^0.14.38",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
